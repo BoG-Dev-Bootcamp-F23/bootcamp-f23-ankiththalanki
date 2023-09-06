@@ -1,0 +1,60 @@
+/* Your Styles Here */
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+body{
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(71, 85, 76);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.cardbox {
+    display: block;
+    align-self: center;
+    text-align: center;
+    padding: 40px 90px;
+    background: #a5190f;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: -10px 10px rgb(114, 1, 1);
+    
+
+}
+.portrait {
+    border-radius: 20px;
+    width: 300px;
+    padding: 6px;
+    background: #fff;
+
+}
+
+.github {
+    border-radius: 20px;
+    width: 40px;
+    margin: 20px;
+
+}
+
+.linkedin {
+    border-radius: 10px;
+    width: 40px;
+    margin: 20px;
+
+}
+
+h3, p {
+    color:rgb(5, 16, 12);
+    font-family: 'Muli', sans-serif;
+    font-size: large;
+}
+h3 {
+    font-size: xx-large;
+}
+p {
+    width: 300px;
+}
