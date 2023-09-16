@@ -1,0 +1,51 @@
+img {
+    width: 50px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #DCDCDC;
+    
+}
+
+.links {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+body {
+    margin: 0px;
+    height: 100vh;
+}
+.main-content {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    
+    flex-direction: column;
+}
+.search-bar {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#search {
+    background-color: gainsboro;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    padding: 15px;
+    padding-right: 500px;
+    padding-left: 20px;
+    margin-right: 20px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    margin-left: 5px;
+    
+}
+
