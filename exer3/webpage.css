@@ -1,5 +1,7 @@
 img {
     width: 50px;
+    border-radius: 30px;
+    
 }
 .header {
     display: flex;
@@ -14,9 +16,26 @@ img {
     width: 50%;
     justify-content: space-around;
 }
+.links a {
+    font-size: 20px;
+    color: white;
+    background-color: blue;
+    padding: 5px;
+    margin: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+} 
+.links a:hover {
+    text-decoration: underline;
+    background-color: rgb(67, 67, 198);
+    transition: background-color ease 250ms;
+}
 body {
     margin: 0px;
     height: 100vh;
+    font-family: 'Open Sans'; font-size: 22px;
 }
 .main-content {
     display: flex;
@@ -34,7 +53,7 @@ body {
 
 #search {
     background-color: gainsboro;
-    border-radius: 10px;
+    border-radius: 2cqh;
     border-style: solid;
     border-width: 3px;
     padding: 15px;
@@ -42,10 +61,54 @@ body {
     padding-left: 20px;
     margin-right: 20px;
 }
+#enter {
+    background-color: lightskyblue;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 3px;
+    padding: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: 20px;
+    
+}
+.extra-content {
+    display: flex;
+
+    
+}
+.extra-content h4 {
+    
+    
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: 20px;
+    margin-top: 0px;
+}
+.extra-content h4:hover {
+    text-decoration: underline;
+}
+#enter a {
+    text-decoration: none;
+    color: black
+}
+#enter:hover {
+    text-decoration: underline;
+    background-color: rgb(87, 166, 215);
+    transition: background-color ease 250ms;
+}
 footer {
     position: fixed;
     bottom: 0;
-    margin-left: 5px;
     
+    margin-left: 1%; 
+}
+footer a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+footer a:hover {
+    text-decoration: underline;
 }
 
