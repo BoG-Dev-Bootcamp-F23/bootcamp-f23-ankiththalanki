@@ -86,6 +86,9 @@ body {
     background-color: #DCDCDC;
     border-radius: 10px;
     margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width:50%;
 }
 .allcontent {
     display: flex;
