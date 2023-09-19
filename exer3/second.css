@@ -12,27 +12,6 @@ img {
     
 }
 
-.links {
-    display: flex;
-    width: 50%;
-    justify-content: space-around;
-}
-.links a {
-    font-size: 20px;
-    color: white;
-    background-color: blue;
-    padding: 5px;
-    margin: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 10px;
-    text-decoration: none;
-} 
-.links a:hover {
-    text-decoration: underline;
-    background-color: rgb(67, 67, 198);
-    transition: background-color ease 250ms;
-}
 body {
     margin: 0px;
     height: 100vh;
@@ -45,12 +24,7 @@ body {
     
     flex-direction: column;
 }
-.search-bar {
-    
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
+
 
 #search {
     background-color: gainsboro;
@@ -63,24 +37,7 @@ body {
     
     
 }
-.extra-content {
-    display: flex;
-    
-    flex-direction: column;
 
-    
-}
-.extra-content h4 {
-    
-    
-    padding-right: 20px;
-    padding-left: 20px;
-    margin-right: 20px;
-    margin-top: 0px;
-}
-.extra-content h4:hover {
-    text-decoration: underline;
-}
 
 .content {
     background-color: #DCDCDC;
@@ -90,11 +47,27 @@ body {
     padding-right: 10px;
     width:50%;
 }
+.content:hover {
+    background-color: #868585;
+    transition: background-color ease 500ms;
+}
 .allcontent {
     display: flex;
     justify-content: center;
     align-items: center;
 
+}
+
+.sideimage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.caption {
+    width:400px;
+    font-size: 20px;
 }
 
 
