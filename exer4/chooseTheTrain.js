@@ -94,13 +94,22 @@ function getTrainComingIn1Minute(arrivals) {
 function updateLineColor(arrivals) {
   // TODO
   let blueArrivals = arrivals.filter( (arrival) => arrival.LINE === 'BLUE');
-  console.log(blueArrivals);
-  const deepcopyArray = JSON.parse(JSON.stringify(blueArrivals));
-  console.log(deepcopyArray);
-  return deepcopyArray.forEach((arrival) => arrival.LINE = "PINK");
+  
+  const deepcopyArray = [];
+  blueArrivals.forEach(element => {
+    const newObject = {...element};
+    deepcopyArray.push(newObject);
+    
+  });
+  
+  return deepcopyArray.map((arrival) => {
+    arrival.LINE = "PINK";
+    return arrival;
+  });
+  
   
 }
 
-//console.log(getKeysToArr(railArray));
-//console.log(getTrainComingIn1Minute(railArray));
+console.log(getKeysToArr(railArray));
+console.log(getTrainComingIn1Minute(railArray));
 console.log(updateLineColor(railArray));
