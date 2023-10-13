@@ -3,7 +3,7 @@ const city = "Atlanta";
 const BASE_URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`
 
 async function fetchData() {
-    const response = await fetch(URL);
+    const response = await fetch(BASE_URL);
     const data = await response.json();
     const temperature = data.main.temp;
     const cityName = data.name;
@@ -18,5 +18,14 @@ async function fetchData() {
     
 
 }
-document.addEventListener("click", () => {
-    fetchData()});
+let counter = 0;
+document.addEventListener("click", (event) => {
+
+    const button = document.getElementById('button');
+    if (event.target === button) {
+        counter++;
+        const textElement = documnet.getElementById("button-info");
+        textElement.textContent = count;
+        
+    }
+});
