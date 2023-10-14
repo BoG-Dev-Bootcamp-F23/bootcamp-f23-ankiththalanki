@@ -4,8 +4,12 @@ import TrainList from "./TrainList.js";
 import Navbar from "../components/Navbar.js";
 
 export default function LinesPage(props) {
+    let color = props.color;
     return (<div className="lines-page">
-        <Navbar color="BLUE"/>
-        <TrainList color="BLUE"/>
+        <div className="header">{color}</div>
+        <div className="station-train">
+        <Navbar color={color}/>
+        <TrainList color={color}/>
+        </div>
         </div>);
 }
