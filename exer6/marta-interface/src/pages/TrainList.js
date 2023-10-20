@@ -1,7 +1,7 @@
 //Displays train data for a specific train object.
 import "./TrainList.css"
 import Train from "../components/Train.js";
-export default function TrainList({color,stationList, arriving, direction, trainList}) {
+export default function TrainList({color,stationList, arriving, direction, trainList, loading}) {
     
     
     let filteredArrivals = trainList?.filter( (arrival) => {
@@ -22,7 +22,12 @@ export default function TrainList({color,stationList, arriving, direction, train
         })
     
     if (filteredArrivals.length === 0) {
-        return <div className="no-trains">No Trains </div>
+        console.log(filteredArrivals);
+        if (loading) {
+            return <div> Loading...</div>
+        }else {
+        return (<div className="no-trains">No Trains Selected</div>);
+        }
     }else {
         return <div>{filteredArrivals.map((arrival) => {
             return <Train {...arrival}/>

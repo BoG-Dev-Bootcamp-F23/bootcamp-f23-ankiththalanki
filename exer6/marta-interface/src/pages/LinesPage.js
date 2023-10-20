@@ -12,6 +12,7 @@ export default function LinesPage(props) {
     const [stationList, setStation] = useState([""]);
     const [arriving, setArriving] = useState(null); //3 states, null, Arriving, or Scheduled. 
     const [direction,setDirection] = useState(null); // N, W, E, S, or null for all.
+    const [loading, setLoading] = useState(true);
     //Pass set station into navbar
     useEffect(()=>{
         setStation([""]);
@@ -59,10 +60,12 @@ export default function LinesPage(props) {
             greenLines = await greenLines.json();
             trains = [...trains,...greenLines];
             setAllTrains(trains);
-            
+            setLoading(false);
+            //Put setLoading here cuz the awaits ensure it isnt reun before previous commands are run.
         }
         getStations()
         getTrains()
+        
     },[])
     const SelectedStyle= {
         backgroundColor: "black", color: "white"
@@ -131,7 +134,7 @@ export default function LinesPage(props) {
             
             </div>
             
-        <TrainList color={color} stationList={stationList} arriving={arriving} direction={direction} trainList={allTrains}/>
+        <TrainList color={color} stationList={stationList} arriving={arriving} direction={direction} trainList={allTrains} loading={loading}/>
         </div>
         </div>
         </div>);
