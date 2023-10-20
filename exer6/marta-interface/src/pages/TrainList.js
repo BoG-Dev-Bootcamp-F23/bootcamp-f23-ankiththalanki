@@ -10,7 +10,7 @@ export default function TrainList({color,stationList, arriving, direction}) {
                 //Also make sure station is correct
                 console.log(direction);
                 if ( (direction === null)|| (direction === arrival.DIRECTION)) {
-                if ((arriving && (arrival.WAITING_TIME === "Arriving"))  || (!arriving && (arrival.WAITING_TIME === "Arriving")) || (arriving === null)) {
+                if ((arriving && (arrival.WAITING_TIME === "Arriving"))  || (!arriving && (arrival.WAITING_TIME !== "Arriving")) || (arriving === null)) {
                 if (stationList.includes("")) { //Null basically means all stations
                 return (<Train {...arrival}/>);
                 }else {
