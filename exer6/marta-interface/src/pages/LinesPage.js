@@ -13,7 +13,7 @@ export default function LinesPage(props) {
     const [direction,setDirection] = useState(null); // N, W, E, S, or null for all.
     //Pass set station into navbar
     useEffect(()=>{
-        setStation("");
+        setStation([""]);
         setArriving(null);
         setDirection(null);
     },[color]);

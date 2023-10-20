@@ -1,0 +1,9 @@
+.no-trains {
+    background-color: white;
+    width: 90%;
+    text-align: center;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
+}
