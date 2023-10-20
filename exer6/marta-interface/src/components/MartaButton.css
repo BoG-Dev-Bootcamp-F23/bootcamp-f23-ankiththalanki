@@ -14,7 +14,7 @@
 }
 
 .marta-button:hover {
-    background-color: black;
+    background-color: rgb(108, 106, 106);
     color:white;
     transition: background-color 250ms;
 }
