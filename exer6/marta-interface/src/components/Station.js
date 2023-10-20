@@ -17,6 +17,7 @@ export default function stations({stationName, stationList, setStation}) {
             setStation([...stationList, currentStation.toUpperCase()]); 
             
         }else {
+            console.log(stationList, "printed");
             setStation(stationList.filter((station) => (station !== currentStation.toUpperCase())));
             
         }

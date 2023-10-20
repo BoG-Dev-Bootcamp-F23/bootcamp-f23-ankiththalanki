@@ -1,11 +1,10 @@
 //Displays train data for a specific train object.
 import "./TrainList.css"
 import Train from "../components/Train.js";
-import arrivals from "../server/trainData.js";
-export default function TrainList({color,stationList, arriving, direction}) {
+export default function TrainList({color,stationList, arriving, direction, trainList}) {
     
     
-    let filteredArrivals = arrivals["RailArrivals"].filter( (arrival) => {
+    let filteredArrivals = trainList?.filter( (arrival) => {
             if (arrival.LINE === color) {
                 //Also make sure station is correct
                 if ( (direction === null)|| (direction === arrival.DIRECTION)) {

@@ -6,7 +6,8 @@ import Navbar from "../components/Navbar.js";
 import SelectLine from "../components/SelectLine.js";
 import {useState, useEffect} from "react";
 export default function LinesPage(props) {
-    
+    const [allStations, setAllStations] = useState({"GOLD":[],"RED":[],"BLUE":[],"GREEN":[]}); //Should be a list of station names
+    const [allTrains, setAllTrains] = useState([]); //Should be a list of train objects
     const [color, setColor] = useState("GOLD");
     const [stationList, setStation] = useState([""]);
     const [arriving, setArriving] = useState(null); //3 states, null, Arriving, or Scheduled. 
@@ -17,7 +18,52 @@ export default function LinesPage(props) {
         setArriving(null);
         setDirection(null);
     },[color]);
+    useEffect(() =>{
+        //Run this to load our code
+        async function getStations() {
+            const stations = {};
+            let goldData = await fetch("http://13.59.196.129:3001/stations/gold");
+            goldData = await goldData.json();
+            stations["GOLD"] = goldData;
 
+            let redData = await fetch("http://13.59.196.129:3001/stations/red");
+            redData = await redData.json();
+            stations["RED"] = goldData;
+
+            let blueData = await fetch("http://13.59.196.129:3001/stations/blue");
+            blueData = await blueData.json();
+            stations["BLUE"] = blueData;
+
+            let greenData = await fetch("http://13.59.196.129:3001/stations/green");
+            greenData = await greenData.json();
+            stations["GREEN"] = greenData;
+            setAllStations(stations);
+            
+        }
+
+        async function getTrains() {
+            
+            let goldLines = await fetch("http://13.59.196.129:3001/arrivals/gold");
+            goldLines = await goldLines.json();
+            let trains = goldLines;
+
+            let redLines = await fetch("http://13.59.196.129:3001/arrivals/red");
+            redLines = await redLines.json();
+            trains = [...trains,...redLines];
+
+            let blueLines = await fetch("http://13.59.196.129:3001/arrivals/blue");
+            blueLines = await blueLines.json();
+            trains = [...trains,...blueLines];
+
+            let greenLines = await fetch("http://13.59.196.129:3001/arrivals/green");
+            greenLines = await greenLines.json();
+            trains = [...trains,...greenLines];
+            setAllTrains(trains);
+            
+        }
+        getStations()
+        getTrains()
+    },[])
     const SelectedStyle= {
         backgroundColor: "black", color: "white"
     }
@@ -25,7 +71,7 @@ export default function LinesPage(props) {
         <SelectLine setColor={setColor}/>
         <div className="header">{color}</div>
         <div className="station-train">
-        <Navbar color={color} setStation={setStation} stationList={stationList}/>
+        <Navbar color={color} setStation={setStation} stationList={stationList} allStations={allStations}/>
         
         <div>
             <div className="buttons">
@@ -85,7 +131,7 @@ export default function LinesPage(props) {
             
             </div>
             
-        <TrainList color={color} stationList={stationList} arriving={arriving} direction={direction}/>
+        <TrainList color={color} stationList={stationList} arriving={arriving} direction={direction} trainList={allTrains}/>
         </div>
         </div>
         </div>);
