@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Inter&display=swap);
+.home {
+    font-family: 'Inter', 'sans-serif';
+    
+}
+
+.maincontent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+}
+
+.routes {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 30px;
+
+}
+.header1 {
+    border-style: solid;
+    padding: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about {
+    font-family: 'Inter', 'sans-serif';
+    border-style: none;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: white;
+    height: fit-content;
+
+}
+.about:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.routes button {
+    font-family: 'Inter', 'sans-serif';
+    border-style: none;
+    border-bottom: solid;
+    background-color: white;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    width: 80%;
+    text-align: start;
+}
+
+.routes button:hover {
+    background-color: rgb(236, 229, 229);
+    transition: background-color ease 250ms;
+}

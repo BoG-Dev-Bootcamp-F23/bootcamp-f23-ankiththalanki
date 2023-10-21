@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/css?family=Inter&display=swap);
+
+.about-marta {
+    font-family: 'Inter', 'sans-serif';
+}
+
+.about-header {
+    border-style: solid;
+    
+    font-size: 20px;
+    font-weight: bold;
+    
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.about-content {
+    display: flex;
+    justify-content: space-evenly;
+}
+.info-about {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 10px;
+    
+}
+.about-header button {
+    font-family: 'Inter', 'sans-serif';
+    border-style: none;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: white;
+    height: fit-content;
+}
+.about-header button:hover {
+    color: blue;
+    text-decoration: underline;
+}

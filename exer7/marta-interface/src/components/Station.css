@@ -1,0 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Inter&display=swap);
+.station {
+    color: white;
+    font-family: 'Inter', 'sans-serif';
+    
+    padding: 10px;
+    padding-left: 40px;
+    width: 220px;
+    background-color: transparent;
+    border-style: none;
+    border-bottom: solid;
+    padding-top: 15px;
+    
+    
+}
+
+.station:hover {
+    background-color: rgb(81, 81, 81);
+}
