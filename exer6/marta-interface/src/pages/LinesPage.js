@@ -5,7 +5,7 @@ import TrainList from "./TrainList.js";
 import Navbar from "../components/Navbar.js";
 import SelectLine from "../components/SelectLine.js";
 import {useState, useEffect} from "react";
-export default function LinesPage(props) {
+export default function LinesPage() {
     const [allStations, setAllStations] = useState({"GOLD":[],"RED":[],"BLUE":[],"GREEN":[]}); //Should be a list of station names
     const [allTrains, setAllTrains] = useState([]); //Should be a list of train objects
     const [color, setColor] = useState("GOLD");

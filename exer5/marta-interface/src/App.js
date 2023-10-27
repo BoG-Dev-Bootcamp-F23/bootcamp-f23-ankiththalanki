@@ -5,7 +5,7 @@ function App() {
   
 
   return (<div>
-    <LinesPage color="GOLD"/>
+    <LinesPage color="RED"/>
   </div>
   
   );
