@@ -11,9 +11,9 @@ export default async function createTicket(data) {
         throw new Error("Database failed to connect...");
     }
     try {
-        const {identifier} = data;
+        const {ticketID} = data;
         
-        return await Ticket.findByIdAndDelete(identifier); //Always make to await when you are interacting with the database.
+        return await Ticket.findByIdAndDelete(ticketID); //Always make to await when you are interacting with the database.
         //Should make it send a user error if you enable to wrong query.
         
         

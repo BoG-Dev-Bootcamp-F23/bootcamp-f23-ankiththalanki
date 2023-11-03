@@ -6,7 +6,7 @@ export default async function handler(req,res) {
             const ticketQueries = await readTicketsByUser(req.query);
             res.status(200).json(ticketQueries);
 
-        }catch {
+        }catch (e) {
             res.status(500).send("Failed.");
         }
 

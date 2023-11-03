@@ -5,7 +5,7 @@ export default async function handler(req,res) {
         try {
             const result = await deleteTicket(req.query);
             if (result === null) {
-                res.status(400).send("User either provided no ID or a non-existing ID.")
+                res.status(400).send("User either did not provide a ticket or provided an incorrect ticketID.")
 
             }
             res.status(200).send("Success");
